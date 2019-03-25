@@ -5067,7 +5067,7 @@ MonoBehaviour:
   SpeedMult: 500
   Noise: {x: 0, y: 0, z: 0}
   distanceLock: 1000
-  DulationLock: 40
+  DulationLock: 1
   Seeker: 1
   LifeTime: 5
   targetlockdirection: 0.5

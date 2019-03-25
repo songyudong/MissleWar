@@ -13,8 +13,8 @@ public class MoverBallistic : MonoBehaviour
     public Vector3 Noise = new Vector3(20, 20, 20);
     private bool locked;
     public int distanceLock = 70;
-    public int DulationLock = 40;
-    private int timetorock;
+    public float DulationLock = 1.0f;
+    private float timetorock;
     public bool Seeker;
     public float LifeTime = 5.0f;
     private float timeCount = 0;
@@ -24,6 +24,8 @@ public class MoverBallistic : MonoBehaviour
     {
         timeCount = Time.time;
         Destroy(gameObject, LifeTime);
+        timetorock = 0;
+        target = null;
     }
 
     private void Update()
@@ -67,7 +69,8 @@ public class MoverBallistic : MonoBehaviour
             }
             else
             {
-                timetorock += 1;
+                timetorock += Time.deltaTime;
+                //Debug.LogErrorFormat("timelock = {0}", timetorock);
             }
 
             if (target)

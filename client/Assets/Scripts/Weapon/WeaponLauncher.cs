@@ -186,7 +186,7 @@ public class WeaponLauncher : MonoBehaviour
         }
         if(bullet.GetComponent<MoverBallistic>())
         {
-            bullet.GetComponent<MoverBallistic>().target = target;
+            //bullet.GetComponent<MoverBallistic>().target = target;
         }
         if (bullet.GetComponent<Damage>())
         {
